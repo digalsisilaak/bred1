@@ -1,0 +1,326 @@
+var s:string;
+procedure Form1.toolStripMenuItem4_Click (sender: Object; e: EventArgs);
+begin
+//Файл — Новый
+TextBox1.Clear;
+end;
+procedure Form1.toolStripMenuItem5_Click (sender: Object; e: EventArgs);
+begin
+//Файл — Открыть
+openFileDialog1.ShowDialog();
+s := openFileDialog1.FileName;
+Text := 'Блокнот ' + s;
+TextBox1.Lines := ReadAllLines(s); end;
+procedure Form1.toolStripMenuItem6_Click (sender: Object; e: EventArgs);
+begin
+//Файл — Сохранить
+saveFileDialog1.ShowDialog();
+F_N := saveFileDialog1.FileName;
+WriteAllLines(F_N, TextBox1.Lines);
+Text := 'Блокнот ' + F_N; end;
+procedure Form1.toolStripMenuItem8_Click (sender: Object; e: EventArgs);
+begin
+//Файл — Выход close;
+end;
+procedure Form1.
+toolStripMenuItem9_Click (sender: Object; e: EventArgs);
+begin
+//Формат — Шрифт
+fontDialog1.ShowDialog();
+TextBox1.Font := fontDialog1.
+Font;
+end;
+procedure Form1.
+toolStripMenuItem10_
+Click(sender: Object; e: EventArgs);
+begin
+//Формат — Цвет текста
+colorDialog1.ShowDialog();
+TextBox1.ForeColor := colorDialog1.Color;
+end;
+procedure Form1.
+toolStripMenuItem11_
+Click(sender: Object; e: EventArgs);
+begin
+//Формат — Цвет фона
+colorDialog1.ShowDialog();
+TextBox1.BackColor := colorDialog1.Color;
+end;
+
+1.2  Click
+procedure Form1.too
+procedure Form1.toolStripMenuItem13_Click(sender: Object; e: EventArgs);
+    var d, i, k, j: integer;
+sl: array[1..10] of string;
+begin
+    s:=TextBox1.Text;
+    d:=length(s);
+    k:=1;
+    s1[k]:='';
+    i:=1;
+    while i<=d do
+        if s[i] <> ' ' then
+        begin
+            s1[k]:=s1[k]+s[i];
+            i:=i+1;
+        end
+        else
+            begin
+            k:=k+1;
+            s1[k]:='';
+            while (s[i] = ' ') and (i<=d) do
+                i:=i+1;
+            end;
+            for i:=1 to k do
+                TextBox1.Text:=TextBox1.Text+#13#10+sl[i];
+end;
+
+
+1.3
+procedure Form1.toolStripMenuItem14_Click(sender: Object; e: EventArgs);
+    begin
+        fontDialog1.ShowDialog();
+        TextBox1.Font:=fontDialog1.Font;
+    end;
+
+procedure Form1.toolStripMenuItem15_Click(sender: Object; e: EventArgs);
+begin
+    colorDialog1.ShowDialog();
+    TextBox1.ForeColor:=colorDialog1.Color;
+end;
+
+procedure Form1.toolStripMenuItem16_Click(sender: Object; e: EventArgs);
+begin
+    ColorDialog1.ShowDialog();
+    TextBox1.BackColor:=colorDialog1.Color;
+end;
+
+procedure Form1.toolStripMenuItem17_Click(sender: Object; e: EventArgs);
+    var d, i, k, j: integer;
+sl: array[1..10] of string;
+begin
+    s:=TextBox1.Text;
+    d:=length(s);
+    k:=1;
+    s1[k]:='';
+    i:=1;
+    while i<=d do
+        if s[i] <> ' ' then
+        begin
+            s1[k]:=s1[k]+s[i];
+            i:=i+1;
+        end
+        else
+            begin
+            k:=k+1;
+            s1[k]:='';
+            while (s[i] = ' ') and (i<=d) do
+                i:=i+1;
+            end;
+            for i:=1 to k do
+            TextBox1.Text:=TextBox1.Text+#13#10+sl[i];
+end;
+
+
+
+2
+procedure Form1.pictureBox1_MouseDown(sender: Object; e: MouseEventArgs);
+begin
+    m_d:=true;
+    x1:=e.X; y1:=e.Y;
+    x2:=30; y2:=20;
+end;
+
+procedure Form1.pictureBox1_MouseUp(sender: Object; e: MouseEventArgs);
+begin
+    m_d:=false;
+end;
+
+procedure Form1.pictureBox1_MouseMove(sender: Object; e: MouseEventArgs);
+begin
+    if (m_d) and (CheckBox1.Checked) then
+    begin
+        gr.DrawLine(p_c, x1, y1, e.X, e.Y);
+    end;
+    if (m_d) and (CheckBox2.Checked) then
+        begin
+        gr.DrawRectangle(p_c, x1, y1, x2, y2 );
+        gr.FillRectangle(s_b, x1, y1, x2, y2 );
+        end;
+    if (m_d) and (CheckBox3.Checked) then
+        begin
+        gr.DrawEllipse(p_c, x1, y1, x2, y2);
+        gr.FillEllipse(s_b, x1, y1, x2, y2);
+        end;
+    x1:=e.X; y1:=e.Y;
+end;
+
+
+
+
+
+
+3
+
+//описание глобальных переменных
+var n1, n2:real;
+znak: char;
+
+procedure Form1.button1_Click(sender: Object; e: EventArgs);
+begin
+    TextBox1.Text:=TextBox1.Text+'1';
+end;
+
+procedure Form1.button2_Click(sender: Object; e: EventArgs);
+begin
+    TextBox1.Text:=TextBox1.Text+'2';
+end;
+
+procedure Form1.button3_Click(sender: Object; e: EventArgs);
+begin
+    TextBox1.Text:=TextBox1.Text+'3';
+end;
+
+procedure Form1.button4_Click(sender: Object; e: EventArgs);
+begin
+    TextBox1.Text:=TextBox1.Text+'4';
+end;
+
+procedure Form1.button5_Click(sender: Object; e: EventArgs);
+begin
+    TextBox1.Text:=TextBox1.Text+'5';
+end;
+
+procedure Form1.button6_Click(sender: Object; e: EventArgs);
+begin
+    TextBox1.Text:=TextBox1.Text+'6';
+end;
+
+procedure Form1.button7_Click(sender: Object; e: EventArgs);
+begin
+    TextBox1.Text:=TextBox1.Text+'7';
+end;
+
+procedure Form1.button8_Click(sender: Object; e: EventArgs);
+begin
+    TextBox1.Text:=TextBox1.Text+'8';
+end;
+
+procedure Form1.button9_Click(sender: Object; e: EventArgs);
+begin
+    TextBox1.Text:=TextBox1.Text+'9';
+end;
+
+procedure Form1.button10_Click(sender: Object; e: EventArgs);
+begin
+    TextBox1.Text:=TextBox1.Text+'0';
+end;
+
+procedure Form1.button11_Click(sender: Object; e: EventArgs);
+begin
+    n1:=StrToFloat(TextBox1.Text);
+    znak:='+';
+    TextBox1.Clear;
+end;
+
+procedure Form1.button12_Click(sender: Object; e: EventArgs);
+begin
+    n1:=StrToFloat(TextBox1.Text);
+    znak:='-';
+    TextBox1.Clear;
+end;
+
+procedure Form1.button13_Click(sender: Object; e: EventArgs);
+begin
+    n1:=StrToFloat(TextBox1.Text);
+    znak:='X';
+    TextBox1.Clear;
+end;
+
+procedure Form1.button14_Click(sender: Object; e: EventArgs);
+begin
+    n1:=StrToFloat(TextBox1.Text);
+    znak:='/';
+    TextBox1.Clear;
+end;
+
+procedure Form1.button15_Click(sender: Object; e: EventArgs);
+begin
+    n2:=StrToFloat(TextBox1.Text);
+    case znak of
+        '+': TextBox1.Text:=FloatToStr(n1+n2);
+        '-': TextBox1.Text:=FloatToStr(n1-n2);
+        '*': TextBox1.Text:=FloatToStr(n1*n2);
+        '/': TextBox1.Text:=FloatToStr(n1/n2);
+    end;
+    n1:=0; n2:=0;
+    znak:=' ';
+end;
+
+procedure Form1.button16_Click(sender: Object; e: EventArgs);
+begin
+    TextBox1.Clear;
+    n1:=0; n2:=0;
+    znak:=' ';
+end;
+
+
+3.2
+
+//корень
+procedure Form1.button17_Click(sender: Object; e: EventArgs);
+begin
+    n1:=StrToFloat(TextBox1.Text);
+    znak:='K';
+    TextBox1.Clear;
+    case znak of
+    'K':TextBox1.Text:=FloatToStr(sqrt(n1));
+    end;
+end;
+
+//синус
+procedure Form1.button18_Click(sender: Object; e: EventArgs);
+begin
+    n1:=StrToFloat(TextBox1.Text);
+    znak:='S';
+    TextBox1.Clear;
+    case znak of
+    'S':TextBox1.Text:=FloatToStr(sin(n1));
+    end;
+end;
+
+
+//косинус
+procedure Form1.button19_Click(sender: Object; e: EventArgs);
+begin
+    n1:=StrToFloat(TextBox1.Text);
+    znak:='C';
+    TextBox1.Clear;
+    case znak of
+    'C':TextBox1.Text:=FloatToStr(cos(n1));
+    end;
+end;
+
+
+//тангенс
+procedure Form1.button20_Click(sender: Object; e: EventArgs);
+begin
+    n1:=StrToFloat(TextBox1.Text);
+    znak:='T';
+    TextBox1.Clear;
+    case znak of
+    'T':TextBox1.Text:=FloatToStr(sin(n1)/cos(n1));
+    end;
+end;
+
+
+//котангенс
+procedure Form1.button21_Click(sender: Object; e: EventArgs);
+begin
+    n1:=StrToFloat(TextBox1.Text);
+    znak:='G';
+    TextBox1.Clear;
+    case znak of
+    'G':TextBox1.Text:=FloatToStr(cos(n1)/sin(n1));
+    end;
+end.
