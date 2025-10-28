@@ -47,8 +47,24 @@ colorDialog1.ShowDialog();
 TextBox1.BackColor := colorDialog1.Color;
 end;
 
+1.1
+
+procedure Form1.toolStripMenuItem11_Click(sender: Object; e: EventArgs);
+begin
+    saveFileDialog1.ShowDialog();
+    F_N:==saveFileDialog1.FileName;
+    WriteAllLines(F_N,TextBox1.Lines);
+    Text:='Блокнот' + F_N
+end;
+procedure Form1.toolStripMenuItem12_Click(sender: Object; e: EventArgs);
+begin
+    saveFileDialog1.ShowDialog();
+    F_N:==saveFileDialog1.FileName;
+    WriteAllLines(F_N,TextBox1.Lines);
+    Text:='Блокнот' + F_N
+end;
+
 1.2  Click
-procedure Form1.too
 procedure Form1.toolStripMenuItem13_Click(sender: Object; e: EventArgs);
     var d, i, k, j: integer;
 sl: array[1..10] of string;
